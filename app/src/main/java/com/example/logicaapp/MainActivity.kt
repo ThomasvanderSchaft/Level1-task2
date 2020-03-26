@@ -16,8 +16,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun check(){
+
+        //assign standard value to the amount of correct answers
         var correctAnswers = 0
+
+        //hardcoded statement to check if answers are correct
         if (etAnswerOne.text.toString() == "T"){
+
+            //adding one point to the amount of correct answers if statement is true
             correctAnswers++
         }
         if (etAnswerTwo.text.toString() == "F"){
@@ -29,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         if (etAnswerFour.text.toString() == "F"){
             correctAnswers++
         }
+
+        //create toast message with amount of correct answers value
         Toast.makeText(this@MainActivity,getString(R.string.correct, correctAnswers), Toast.LENGTH_LONG).show()
     }
 }
